@@ -9,9 +9,15 @@ const app = express();
 const PORT = 3000;
 
 // 3. CONFIGURAÇÃO DE MIDDLEWARES
+const hbs = exphbs.create({
+  helpers: {
+    eq: (a, b) => a === b
+  }
+});
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.engine('handlebars', exphbs());
+app.engine('handlebars', exphbs(), hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 

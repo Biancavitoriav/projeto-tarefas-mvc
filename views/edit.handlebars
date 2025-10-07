@@ -6,11 +6,11 @@
   <label>Descrição:</label><br>
   <input type="text" name="description" value="{{task.description}}" /><br><br>
   <label>Prioridade:</label>
-  <select name="prioridade" id="priority">
-    <option value="">Escolha o nível de prioridade</option>
-    <option value="{{task.priority}}">Baixa</option>
-    <option value="{{task.priority}}">Média</option>
-    <option value="{{task.priority}}">Alta</option>
+  <select name="priority" id="priority" required> 
+    <option value="">Escolha o nível de prioridade</option> 
+    <option value="Baixa" {{#if (eq task.priority "Baixa")}}selected{{/if}}>Baixa</option> 
+    <option value="Média" {{#if (eq task.priority "Média")}}selected{{/if}}>Média</option> 
+    <option value="Alta" {{#if (eq task.priority "Alta")}}selected{{/if}}>Alta</option> 
   </select>
   <label for="done">Concluída?</label>
   <input type="checkbox" id="done" name="done" {{#if task.done}}checked{{/if}}/>
