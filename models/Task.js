@@ -4,13 +4,13 @@ const db = require('../db/conn');
 const Task = db.define('Task', {
   title: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: false
   },
   description: {
     type: DataTypes.STRING,
   },
   priority: {
-    TYPE: DataTypes.STRING
+    type: DataTypes.STRING
   },
   done: {
     type: DataTypes.BOOLEAN,
