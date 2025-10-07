@@ -9,6 +9,9 @@ const Task = db.define('Task', {
   description: {
     type: DataTypes.STRING,
   },
+  priority: {
+    TYPE: DataTypes.STRING
+  },
   done: {
     type: DataTypes.BOOLEAN,
     defaultValue: false,
