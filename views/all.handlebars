@@ -2,7 +2,7 @@
 {{#if tasks.length}}
   <ul>
     {{#each tasks}}
-      <li>
+      <li class="{{this.priority}}">
         <b>{{this.title}}</b> - {{this.description}} - {{this.priority}} -
         {{#if this.done}}
             ✅ Concluída

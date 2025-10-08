@@ -258,3 +258,15 @@ br {
     align-items: flex-start;
   }
 }
+
+.Baixa {
+  background-color: rgb(175, 229, 243);
+}
+
+.Média {
+  background-color: rgb(255, 227, 100);
+}
+
+.Alta {
+  background-color: #ed6452;
+}
