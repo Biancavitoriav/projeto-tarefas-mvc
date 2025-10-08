@@ -6,25 +6,9 @@ const { Sequelize } = require('sequelize');
 // 3. Substitua 'usuario' e 'senha' pelas SUAS credenciais.
 //    (Em XAMPP padrão, o usuário é 'root' e a senha é vazia: '')
 
-// const sequelize = new Sequelize('tasks_db', 'root', '1234', {
-//   host: 'localhost',
-//   dialect: 'mysql',
-// });
-
-const sequelize = new Sequelize('db_tasks', 'postgres', '1234', {
+const sequelize = new Sequelize('tasks_db', 'root', '1234', {
   host: 'localhost',
-  dialect: 'postgres',
-  logging: console.log,
-  define: {
-    timestamps: true,
-    underscored: false,
-  },
-  pool: {
-    max: 10,
-    min: 0,
-    acquire: 30000,
-    idle: 10000,
-  },
+  dialect: 'mysql',
 });
 
 try {
