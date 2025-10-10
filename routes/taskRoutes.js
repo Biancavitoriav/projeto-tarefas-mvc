@@ -20,4 +20,8 @@ router.post('/edit', taskController.updateTask);
 // Rota para RECEBER a requisição de deletar uma tarefa
 router.post('/delete', taskController.deleteTask);
 
+router.get('/filterPending', taskController.filterPending);
+
+router.get('/filterCompleted', taskController.filterCompleted);
+
 module.exports = router;

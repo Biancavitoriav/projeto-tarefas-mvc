@@ -60,4 +60,14 @@ module.exports = {
     await Task.destroy({ where: { id: id } }); // DELETE FROM Tasks WHERE id = ?
     res.redirect('/tasks');
   },
+
+  async filterPending(req, res) {
+    const tasks = await Task.findAll({ where: { done: false }, raw: true})
+    res.render('all', { tasks });
+  },
+
+  async filterCompleted(req, res) {
+    const tasks = await Task.findAll({ where: { done: true }, raw: true})
+    res.render('all', { tasks })
+  }
 };

@@ -8,13 +8,25 @@
   <header>
     <h1>📋 Lista de Tarefas</h1>
     <nav>
-      <a href="/tasks">Ver Todas</a> |
       <a href="/tasks/create">Criar Nova Tarefa</a>
+      <select id="filtro">
+      <option disabled selected>Filtrar por:</option>
+      <option value="/tasks/filterPending">Pendentes</option>
+      <option value="/tasks/filterCompleted">Concluídas</option>
+      <option value="/tasks">Todas</option>
+    </select>
     </nav>
   </header>
   <hr>
   <main>
     {{{ body }}}
   </main>
+  <script>
+  const filtro = document.getElementById('filtro');
+  filtro.addEventListener('change', (e) => {
+    const rota = e.target.value;
+    if (rota) window.location.href = rota;
+  });
+</script>
 </body>
 </html>
