@@ -15,5 +15,7 @@
   <label for="done">Concluída?</label>
   <input type="checkbox" id="done" name="done" {{#if task.done}}checked{{/if}}/>
   <br><br>
+  <label>Prazo (data limite):</label><br>
+  <input type="date" name="limitDate" value="{{task.limitDate}}" /><br><br>
   <button type="submit">Salvar Alterações</button>
 </form>

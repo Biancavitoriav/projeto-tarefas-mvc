@@ -1,11 +1,9 @@
-/* Reset e configurações globais */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* HTML e Body */
 html {
   font-size: 16px;
 }
@@ -18,7 +16,6 @@ body {
   color: #333;
 }
 
-/* Header */
 header {
   background: white;
   padding: 30px;
@@ -28,7 +25,6 @@ header {
   text-align: center;
 }
 
-/* Títulos */
 h1 {
   color: #667eea;
   font-size: 2.5rem;
@@ -44,12 +40,10 @@ h2 {
   border-bottom: 3px solid #667eea;
 }
 
-/* Navegação */
 nav {
   margin-top: 15px;
 }
 
-/* Links */
 a {
   color: #667eea;
   text-decoration: none;
@@ -66,7 +60,6 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* Linha horizontal */
 hr {
   border: none;
   height: 2px;
@@ -74,7 +67,6 @@ hr {
   margin: 20px 0;
 }
 
-/* Main */
 main {
   background: white;
   padding: 40px;
@@ -84,7 +76,6 @@ main {
   margin: 0 auto;
 }
 
-/* Parágrafos */
 p {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -95,13 +86,11 @@ p {
   border-left: 4px solid #667eea;
 }
 
-/* Listas não ordenadas */
 ul {
   list-style: none;
   padding: 0;
 }
 
-/* Itens da lista */
 li {
   background: #f8f9fa;
   padding: 20px;
@@ -121,14 +110,12 @@ li:hover {
   box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
 }
 
-/* Negrito */
 b {
   color: #764ba2;
   font-size: 1.2rem;
   margin-right: 10px;
 }
 
-/* Formulários */
 form {
   background: #f8f9fa;
   padding: 30px;
@@ -144,7 +131,6 @@ form[style*="display:inline"] {
   box-shadow: none;
 }
 
-/* Labels */
 label {
   display: block;
   font-weight: 600;
@@ -158,7 +144,6 @@ label[for="done"] {
   margin-left: 5px;
 }
 
-/* Inputs de texto */
 input[type="text"] {
   width: 100%;
   padding: 12px 15px;
@@ -175,12 +160,10 @@ input[type="text"]:focus {
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-/* Input hidden */
 input[type="hidden"] {
   display: none;
 }
 
-/* Checkbox */
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
@@ -188,7 +171,44 @@ input[type="checkbox"] {
   accent-color: #667eea;
 }
 
-/* Botões */
+select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  color: #333;
+  margin-bottom: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 1px 3px rgba(102, 126, 234, 0.05);
+}
+
+select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  color: #333;
+  margin-bottom: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 1px 3px rgba(102, 126, 234, 0.05);
+}
+
+input[type="date"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
 button {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -225,13 +245,11 @@ form[style*="display:inline"] button:hover {
   box-shadow: 0 4px 10px rgba(231, 76, 60, 0.4);
 }
 
-/* Quebras de linha */
 br {
   display: block;
   margin: 5px 0;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   body {
     padding: 10px;
