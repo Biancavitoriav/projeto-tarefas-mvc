@@ -5,7 +5,7 @@
       <li class="{{this.priority}}">
         <b>{{this.title}}</b> - {{this.description}} - {{this.priority}} -
         {{#if this.limitDate}}
-            {{this.limitDate}}-
+            {{formatDate this.limitDate}} -
         {{/if}}
         {{#if this.done}}
             ✅ Concluída

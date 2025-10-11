@@ -10,10 +10,15 @@ const PORT = 3000;
 
 // 3. CONFIGURAÇÃO DE MIDDLEWARES
 const hbs = exphbs.create({
-  helpers: {
-    eq: (a, b) => a === b
-  }
+    helpers: {
+        eq: (a, b) => a === b,
+        formatDate: (date) => {
+            if (!date) return '';
+            return new Date(date).toLocaleDateString('pt-BR');
+        }
+    }
 });
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
